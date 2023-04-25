@@ -1,0 +1,65 @@
+.container {
+  display: flex;
+  background-image: url("/src/assets/Cyberpsychologie.jpeg");
+  color: #FFF;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding-top: 300px;
+
+}
+
+ .sous-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1200px;
+  height: 1000px;
+  padding: 50px;
+  margin: 20px;
+  margin-top: 200px;
+  border-radius: 25px;
+  background-color: #000;
+  opacity: 0.8;
+ }
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.button {
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  background-color: #008CBA;
+  color: #FFF;
+  cursor: pointer;
+}
+
+.text-color {
+color: #FFF;
+}
+
+.is-large {
+  font-size: 2rem;
+  padding: 2rem 4rem;
+  border-radius: 2rem;
+}
+
+.is-primary {
+  background-color: #00d1b2;
+}
+
+.is-rounded {
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    height: 100%;
+  }
+}
+
