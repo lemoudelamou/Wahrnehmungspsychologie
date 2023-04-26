@@ -28,12 +28,10 @@ h1 {
   margin-bottom: 20px;
 }
 
-p {
+.text {
   margin-bottom: 10px;
-  color: #000;
+  color: #fff;
   font-size: 14pt;
-  font-style: italic;
-  font-weight: bold;
   
 }
 
@@ -73,14 +71,14 @@ button:hover {
   box-align: center;
   text-align: center;
   border-radius: 10px;
-  background-color: #f5f5f5;
+  background-color: #000;
   opacity: 0.8;
 
 }
 
 .rules-title {
   font-size: 32px;
-  color: #000;
+  color: #fff;
   font-weight: bold;
   margin-bottom: 30px;
 }
@@ -89,13 +87,32 @@ button:hover {
   font-size: 20px;
   text-align: left;
   margin-left: 40px;
-  color: #000;
+  color: #fff;
 }
 
 .rules-steps-item {
   margin-bottom: 20px;
-  color: #000;
+  color: #fff;
 }
 
 
 
+@media only screen and (max-width: 768px) {
+  .rules-container {
+    padding-top: 10vw;
+    padding-bottom: 10vw;
+    margin-bottom: 15vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+
+  .home-container {
+    margin-top: 5vw;
+    padding: 10vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    padding-bottom: 30vw;
+  }
+
+
+}

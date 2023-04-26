@@ -8,6 +8,7 @@ import Navbar from './Componenets/Navbar';
 import SplashScreen from './Componenets/SplashScreen';
 import Home from './Componenets/Home';
 import Rules from './Componenets/Rules';
+import Footer from './Componenets/Footer';
 
 
 export default function App() {
@@ -30,6 +31,8 @@ function AppRouter() {
         <Route path="/Home" element={<Home />}/>
         <Route path="/Rules" element={<Rules />}/>
       </Routes>
+      {location.pathname === '/' ? null : <Footer/>}
+
     </div>
   );
 }

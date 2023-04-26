@@ -1,18 +1,26 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../style/SplashScreen.css';
 
-
-
-import splashVideo from '../assets/Across_The_Universe.mp4';
+import splashVideo from '../assets/tunnel.mp4';
 
 export default function SplashScreen() {
+  const [showText, setShowText] = useState(false);
+
   useEffect(() => {
     const timer = setTimeout(() => {
       // Replace "next-page" with the path to the next page
       window.location.href = '/Home';
     }, 15000);
-    // Clear the timer when the component unmounts
-    return () => clearTimeout(timer);
+
+    const textTimer = setTimeout(() => {
+      setShowText(true);
+    }, 5000); // Show text 5 seconds before the timer ends
+
+    // Clear the timers when the component unmounts
+    return () => {
+      clearTimeout(timer);
+      clearTimeout(textTimer);
+    };
   }, []);
 
   return (
@@ -24,9 +32,14 @@ export default function SplashScreen() {
         muted
         className="SplashScreen-video"
       />
+      {showText && (
+        <div className="SplashScreen-text">
+          <h1>Reaktionszeit Bewertung</h1>
+        </div>
+      )}
       <div className="Skip-button" onClick={() => window.location.href = '/Home'}>
-  Skip
-</div>
+        Skip
+      </div>
     </div>
   );
 }

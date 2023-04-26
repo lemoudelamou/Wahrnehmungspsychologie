@@ -1,33 +1,45 @@
-.container {
-  display: flex;
-  background-image: url("/src/assets/Cyberpsychologie.jpeg");
-  color: #FFF;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  padding-top: 300px;
-
+/* Use relative units for font sizes */
+body {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1rem;
+  color: #333;
 }
 
- .sous-container{
+/* Use media queries to adjust layout for different screen sizes */
+.container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 1200px;
-  height: 1000px;
-  padding: 50px;
+  min-height: 100vh;
+  padding-top: 100px;
+  background-image: url("/src/assets/Cyberpsychologie.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.sous-container {
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+  0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 800px;
+  height: auto;
+  padding: 20px;
   margin: 20px;
-  margin-top: 200px;
+  margin-top: 80px;
   border-radius: 25px;
   background-color: #000;
   opacity: 0.8;
- }
+}
 
 .title {
   font-size: 2rem;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .button {
@@ -40,7 +52,7 @@
 }
 
 .text-color {
-color: #FFF;
+  color: #FFF;
 }
 
 .is-large {
@@ -57,9 +69,63 @@ color: #FFF;
   border-radius: 50%;
 }
 
-@media screen and (max-width: 768px) {
-  .container {
-    height: 100%;
+@media only screen and (max-width: 768px) {
+  /* Adjust styles for small screens */
+  .sous-container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
   }
 }
+.table-container{
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+  0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 600px;
+  height: auto;
+  padding: 20px;
+  margin: 20px;
+  margin-top: 80px;
+  border-radius: 25px;
+  background-color: #000;
+  opacity: 0.8;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  color: #444;
+}
+
+tr:hover {
+  background-color: #f56;
+}
+
 
