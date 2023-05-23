@@ -9,6 +9,9 @@ import SplashScreen from './Componenets/SplashScreen';
 import Home from './Componenets/Home';
 import Rules from './Componenets/Rules';
 import Footer from './Componenets/Footer';
+import SignUp from './Componenets/SignUp'
+import SignIn from './Componenets/SignIn'
+import Calculate from './Componenets/Calculate';
 
 
 export default function App() {
@@ -25,11 +28,16 @@ function AppRouter() {
   return (
     <div>
       {location.pathname === '/' ? null : <Navbar/>}
+
       <Routes>
-        <Route path="/" element={<SplashScreen/>}/>
+        <Route path="/" exact={true} element={<SplashScreen/>}/>
         <Route path="/Experiment" element={<ReactionTimeExperiment />}/>
-        <Route path="/Home" element={<Home />}/>
+          <Route path="/SignUp"  element={<SignUp />}/>
+          <Route path="/SignIn"  element={<SignIn />}/>
+          <Route path="/Home"  element={<Home />}/>
         <Route path="/Rules" element={<Rules />}/>
+        <Route path="/Calculate" element={<Calculate />}/>
+
       </Routes>
       {location.pathname === '/' ? null : <Footer/>}
 

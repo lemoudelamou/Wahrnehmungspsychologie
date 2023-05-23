@@ -85,6 +85,13 @@ nav {
 	height: 45px;
 }
 
+.cal{
+	width: 45px;
+	height: 45px;
+}
+
+
+
 
 @media only screen and (max-width: 1024px) {
 	header .nav-btn {
@@ -123,7 +130,8 @@ nav {
 	  align-self: self-start;
 	  align-items: start;
 	}
+
+	
   }
   
 
-  
